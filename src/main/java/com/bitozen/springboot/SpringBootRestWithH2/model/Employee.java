@@ -14,13 +14,17 @@ public class Employee {
 
     @Column(name = "id")
     @Id
-    @Min(value = 15, message = "Age should not be less than 15")
+    @Min(value = 0, message = "Age should not be less than 15")
     @Max(value = 65, message = "Age should not be greater than 65")
     Integer id;
 
     @Column(name = "name")
     @NotNull(message = "First Name cannot be null")
     String name;
+    
+    @Column(name = "address")
+    @NotNull(message = "Address cannot be null")
+    String address;
 
     public Integer getId() {
         return id;
@@ -36,5 +40,13 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
+    }
+    
+    public String getAddress() {
+        return address;
+    }
+    
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
