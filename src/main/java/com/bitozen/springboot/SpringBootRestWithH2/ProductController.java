@@ -1,7 +1,8 @@
-package com.bitozen.springboot.SpringBootRestWithH2.service;
+package com.bitozen.springboot.SpringBootRestWithH2;
 
 import com.bitozen.springboot.SpringBootRestWithH2.model.Employee;
 import com.bitozen.springboot.SpringBootRestWithH2.model.Product;
+import com.bitozen.springboot.SpringBootRestWithH2.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

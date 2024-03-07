@@ -9,7 +9,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "Formula One Team")
+@Table(name = "FORMULAONE")
 public class formulaOne {
 	
 	@Column(name = "id")
@@ -26,27 +26,27 @@ public class formulaOne {
 		this.id = id;
 	}
 	
-	@Column(name = "Team Name")
+	@Column(name = "team")
 	@NotNull(message = "Team Name cannot be null")
-	String name;
+	String teamname;
 	
-	public String getName() {
-		return name;
+	public String getTeamname() {
+		return teamname;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setTeamname(String teamname) {
+		this.teamname = teamname;
 	}
 	
-	@Column(name = "Chassis Name")
+	@Column(name = "chassis")
 	@NotNull(message = "This cannot be null")
-	String address;
+	String chassisname;
 	
-	public String getAddress() {
-		return address;
+	public String getChassisname() {
+		return chassisname;
 	}
 	
-	public void setAddress(String address) {
-		this.address = address;
+	public void setChassisname(String chassisname) {
+		this.chassisname = chassisname;
 	}
 }

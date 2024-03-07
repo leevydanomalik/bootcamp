@@ -1,6 +1,7 @@
-package com.bitozen.springboot.SpringBootRestWithH2.service;
+package com.bitozen.springboot.SpringBootRestWithH2;
 
 import com.bitozen.springboot.SpringBootRestWithH2.model.Transaction;
+import com.bitozen.springboot.SpringBootRestWithH2.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
