@@ -91,3 +91,49 @@ CREATE TABLE DRIVER
         driverlicense VARCHAR2(50) NOT NULL,
         PRIMARY KEY(id)
         );
+
+CREATE TABLE MOTOGP
+    (
+    id NUMBER(10) NOT NULL,
+    biker_name VARCHAR2(50) NOT NULL,
+    team VARCHAR2(50) NOT NULL,
+    nationality VARCHAR2(50) NOT NULL,
+    bike_number VARCHAR2(50) NOT NULL,
+    bike_brand VARCHAR2(50) NOT NULL,
+    wins VARCHAR2(50) NOT NULL,
+    podiums VARCHAR2(50) NOT NULL,
+    championships VARCHAR2(50) NOT NULL,
+    active VARCHAR2(50) NOT NULL,
+    PRIMARY KEY(id)
+    );
+
+CREATE TABLE BARCELONA
+    (
+    id BIGINT PRIMARY KEY,
+    player_name VARCHAR(255),
+    position VARCHAR(255),
+    nationality VARCHAR(255),
+    age INT,
+    appearances INT,
+    goals INT,
+    assists INT,
+    yellow_cards INT,
+    red_cards INT
+    );
+
+CREATE TABLE CALLOFDUTY
+    (
+    id NUMBER(10) NOT NULL,
+    title VARCHAR2(50) NOT NULL,
+    release_year VARCHAR2(50) NOT NULL,
+    platform VARCHAR2(50) NOT NULL,
+    genre VARCHAR2(50) NOT NULL,
+    setting VARCHAR2(50) NOT NULL,
+    main_character VARCHAR2(50) NOT NULL,
+    multiplayer VARCHAR2(50) NOT NULL,
+    dlc_available VARCHAR2(50) NOT NULL,
+    sales VARCHAR2(50) NOT NULL,
+    rating VARCHAR2(50) NOT NULL,
+    PRIMARY KEY(id)
+    );
+
