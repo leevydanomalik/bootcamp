@@ -137,3 +137,17 @@ CREATE TABLE CALLOFDUTY
     PRIMARY KEY(id)
     );
 
+
+ CREATE TABLE BLINK
+    (
+     ID NUMBER(10) NOT NULL,
+     grade VARCHAR2(50) NOT NULL,
+     member VARCHAR2(50) NOT NULL,
+     activate VARCHAR2(50) NOT NULL,
+     rating VARCHAR2(50) NOT NULL,
+     personalrating VARCHAR2(50) NOT NULL,
+     datee VARCHAR2(50) NOT NULL,
+     timee VARCHAR2(50) NOT NULL,
+     PRIMARY KEY(ID)
+    );
+
