@@ -151,3 +151,28 @@ CREATE TABLE CALLOFDUTY
      PRIMARY KEY(ID)
     );
 
+
+ CREATE TABLE LAUNDRY
+     (
+      id NUMBER(10) NOT NULL,
+      order VARCHAR2(50) NOT NULL,
+      PRIMARY KEY(ID)
+     );
+
+
+ CREATE TABLE PAKAIAN
+     (
+      id NUMBER(10) NOT NULL,
+      Jenis VARCHAR2(50) NOT NULL,
+      Berat VARCHAR2(50) NOT NULL,
+      Status VARCHAR2(50) NOT NULL,
+      Harga VARCHAR2(50) NOT NULL,
+      PRIMARY KEY(ID)
+     );
+
+ CREATE TABLE STATUS
+      (
+       id NUMBER(10) NOT NULL,
+       LaundryStatus VARCHAR2(50) NOT NULL,
+       PRIMARY KEY(ID)
+      );
