@@ -8,27 +8,18 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
 @Entity
-@Table(name = "CUSTOMER")
-public class Customer {
+@Table(name = "INVENTORY")
+public class Inventory {
 	@Column(name = "id")
 	@Id
 	@Min(value = 0, message = "ID should not be less than 0")
 	@Max(value = 65, message = "ID should not be greater than 65")
 	Integer id;
-	@Column(name = "name")
-	String name;
-	@Column(name = "address")
-	String address;
-	@Column(name = "phonenumber")
-	String PhoneNumber;
 	
-	public String getPhoneNumber() {
-		return PhoneNumber;
-	}
-	
-	public void setPhoneNumber(String phoneNumber) {
-		PhoneNumber = phoneNumber;
-	}
+	@Column(name = "item_id")
+	Integer itemID;
+	@Column(name = "quantity")
+	Integer quantity;
 	
 	public Integer getId() {
 		return id;
@@ -38,19 +29,19 @@ public class Customer {
 		this.id = id;
 	}
 	
-	public String getName() {
-		return name;
+	public Integer getItemID() {
+		return itemID;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setItemID(Integer itemID) {
+		this.itemID = itemID;
 	}
 	
-	public String getAddress() {
-		return address;
+	public Integer getQuantity() {
+		return quantity;
 	}
 	
-	public void setAddress(String address) {
-		this.address = address;
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
 	}
 }

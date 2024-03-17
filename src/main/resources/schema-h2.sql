@@ -11,8 +11,7 @@ CREATE TABLE CUSTOMER
         id NUMBER(10) NOT NULL,
         name VARCHAR2(50) NOT NULL,
         address VARCHAR2(50) NOT NULL,
-        custtype VARCHAR2(10) NOT NULL,
-        custstatus VARCHAR2(10) NOT NULL,
+        phonenumber VARCHAR2(10) NOT NULL,
         PRIMARY KEY(id)
         );
 
@@ -152,27 +151,60 @@ CREATE TABLE CALLOFDUTY
     );
 
 
- CREATE TABLE LAUNDRY
+ CREATE TABLE orderr
      (
       id NUMBER(10) NOT NULL,
-      order VARCHAR2(50) NOT NULL,
-      PRIMARY KEY(ID)
+      customer_id VARCHAR2(50) NOT NULL,
+      staff_id VARCHAR2(50) NOT NULL,
+      order_date VARCHAR2(50) NOT NULL,
+      status VARCHAR2(50) NOT NULL,
+      PRIMARY KEY(id)
      );
 
 
- CREATE TABLE PAKAIAN
-     (
-      id NUMBER(10) NOT NULL,
-      Jenis VARCHAR2(50) NOT NULL,
-      Berat VARCHAR2(50) NOT NULL,
-      Status VARCHAR2(50) NOT NULL,
-      Harga VARCHAR2(50) NOT NULL,
-      PRIMARY KEY(ID)
-     );
-
- CREATE TABLE STATUS
+ CREATE TABLE ITEM
       (
        id NUMBER(10) NOT NULL,
-       LaundryStatus VARCHAR2(50) NOT NULL,
-       PRIMARY KEY(ID)
+       order_id VARCHAR2(50) NOT NULL,
+       jenispakaian VARCHAR2(50) NOT NULL,
+       price VARCHAR2(50) NOT NULL,
+       quantity VARCHAR2(50) NOT NULL,
+       PRIMARY KEY(id)
       );
+
+ CREATE TABLE STAFF
+       (
+        id NUMBER(10) NOT NULL,
+        name VARCHAR2(50) NOT NULL,
+        positionn VARCHAR2(50) NOT NULL,
+        sallary VARCHAR2(50) NOT NULL,
+        PRIMARY KEY(id)
+       );
+
+
+ CREATE TABLE BILL
+        (
+         id NUMBER(10) NOT NULL,
+         order_id VARCHAR2(50) NOT NULL,
+         total_amount VARCHAR2(50) NOT NULL,
+         payment_status VARCHAR2(50) NOT NULL,
+         PRIMARY KEY(id)
+        );
+
+ CREATE TABLE INVENTORY
+         (
+          id NUMBER(10) NOT NULL,
+          item_id VARCHAR2(50) NOT NULL,
+          quantity VARCHAR2(50) NOT NULL,
+          PRIMARY KEY(id)
+         );
+
+
+ CREATE TABLE REPORT
+          (
+           id NUMBER(10) NOT NULL,
+           staff_id VARCHAR2(50) NOT NULL,
+           report_date VARCHAR2(50) NOT NULL,
+           details VARCHAR2(50) NOT NULL,
+           PRIMARY KEY(id)
+          );
